@@ -265,7 +265,7 @@ footer {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 5%;
     border: none;
 }
 
@@ -274,13 +274,13 @@ footer {
     color: white;
     border-radius: 6px;
     position: relative;
-    padding-top: 10%;
-    padding-bottom: 5%;
+    padding-top: 40%;
+    padding-bottom: 30%;
 }
 
 .container.aboutme h2 {
     color: white;
-    margin: 20px;
+    margin: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     position: absolute;
@@ -297,4 +297,5 @@ footer {
     top: 20%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 
