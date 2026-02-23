@@ -1,0 +1,299 @@
+
+/* NAV BAR */
+/* Desktop nav */
+header {
+  position: relative;
+  z-index: 10; 
+}
+
+nav {
+  border-bottom: 1px solid blueviolet;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  padding: 0 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: blueviolet;
+}
+
+/* Hamburger icon */
+.icon {
+  display: none; /* hidden on desktop */
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  user-select: none;
+}
+
+/* ---------------- MOBILE STYLES ---------------- */
+@media screen and (max-width: 600px) {
+
+  /* Hide desktop menu, make menu a floating panel */
+  ul {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -250px; /* hidden by default off-screen */
+    height: 100%;
+    width: 250px;
+    background-color: black;
+    padding-top: 60px; /* space for icon */
+    transition: right 0.3s ease;
+    z-index: 20;
+  }
+
+  ul.show {
+    right: 0; /* slide in */
+  }
+
+  li a {
+    padding: 16px;
+    border-bottom: 1px solid gray;
+    text-align: left;
+  }
+
+  .icon {
+    display: block; /* show hamburger */
+    float: right;
+    top: 14px;
+    z-index: 30; /* above the menu */
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Make the html and body take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+}
+
+
+/* Main content expands to fill remaining space */
+main {
+    flex: 5;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+
+
+/* Wrapper uses flex column layout */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 5vh; /* full viewport height */
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+p {
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+h1 {
+    color:#ffca57;
+    font-size:3vw;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+} 
+
+
+h2 {
+    color:blueviolet; 
+    font-size:3vw;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Footer styling */
+footer {
+    background-color:rgb(68, 5, 119);
+    color: white;
+    text-align: center;
+} 
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* IMG GRID WHEN ON LARGER SCREEN */
+
+.image-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.panel {
+    height: 300px;
+    display: flex;
+    align-items: center;      /* vertical center */
+    justify-content: center;  /* horizontal center */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+.panel h3 {
+    position: relative;
+    z-index: 2;
+}
+
+.panel1 {background-image: url("images/imgcomp.gif");}
+.panel2 {background-image: url("images/GIRL-NEXT-DOOR.gif");}
+.panel3 {background-image: url("images/relaxation.gif");}
+
+
+
+/* IMG GRID WHEN ON SMALLER SCREEN */
+
+@media screen and (max-width: 900px) {
+
+.image-section {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-template-columns: 1fr;
+}
+
+.panel {
+    height: 300px;
+    display: flex;
+    align-items: center;      /* vertical center */
+    justify-content: center;  /* horizontal center */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+/* Keep text above overlay */
+.panel h3 {
+    position: relative;
+    z-index: 2;
+}
+
+/* Individual background images */
+.panel1 {background-image: url("images/imgcomp.gif");}
+.panel2 {background-image: url("images/GIRL-NEXT-DOOR.gif");}
+.panel3 {background-image: url("images/relaxation.gif");}
+
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 5px solid blueviolet;
+    border-bottom: 5px solid blueviolet;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.todo__value {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    flex-grow: 1;
+    color: white;
+}
+
+.todo:has(.todo__checkbox:checked) {  /* be careful when using this as the compatability is not yet perfect */
+    color: green;
+    background: rgb(26, 24, 29);
+    text-decoration: line-through;
+    order: 1;
+} 
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+.container.aboutme {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    border: none;
+}
+
+.box {
+    height:20vw;
+    color: white;
+    border-radius: 6px;
+    position: relative;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.container.aboutme h2 {
+    color: white;
+    margin: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    font-size: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.container.aboutme p {
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

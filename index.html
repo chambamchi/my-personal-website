@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- to make page responsive -->
+        <title>Hi there...</title>
+        <link rel="icon" type="image/png" href="images/chambam.png">
+    </head>
+
+
+    
+<body>
+
+<header>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">MySite</div>
+
+      <!-- Hamburger / X icon -->
+      <a href="javascript:void(0);" class="icon" id="hamburger">
+        &#9776; <!-- hamburger initially -->
+      </a>
+
+      <!-- Mobile menu -->
+      <ul id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="https://www.chiamakaotti.com" target="_blank">Portfolio</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+
+<section class="image-section">
+    <div class="panel panel1">
+        <h3>Play</h3>
+    </div>
+
+    <div class="panel panel2">
+        <h3>Creation</h3>
+    </div>
+
+    <div class="panel panel3">
+        <h3>Relax</h3>
+    </div>
+</section> 
+
+
+
+
+<!-- MAIN BODY -->
+
+<main>
+
+<br>
+<br>
+<h1>Hi there,</h1>
+<br>
+
+<p>I'm Whitney, AKA Cham or Chi [this is what my family and friends all me]. I'm a creative based in North London, 
+    with over 5 years of experience spanning over full time and freelance work. 
+    My passion lies in creating engaging, meaningful (and completely useless but visually compelling) 
+    content that bring ideas to life. In addition to this, I run a growing TikTok account featuring original comedic 2D characters, 
+    which has attracted nearly 30,000 followers since its launch earlier in 2025. Whether it's crafting compelling 
+    animations or exploring new creative outlets, I’m always driven by a desire to innovate and tell stories in unique ways.</p>
+    <br>
+    <P> <!-- A heading/ button unsing "target" to ensure it opens in a new tab -->
+    Click <a href="https://www.chiamakaotti.com" style="color:#ffca57" target="_blank">here</a> to see my animation portfolio!
+    </P> 
+<br>
+<br> 
+
+
+ 
+
+
+<h1 style="float: right;">This year...</h1>
+<br>
+<br>
+<p style="float: right;">I set out a few personal goals for growth, personal development and also, just for fun. I'm off to a good(ish) start so far. </p>
+<br>
+<br>
+<!-- dcode to-do list tutorial on YT -->
+<div class="container">
+    <div class="todo">
+        <input class="todo__value" type="text" placeholder="(empty)" value="Try a new activity">
+        <input class="todo__checkbox" type="checkbox">
+    </div>
+    <div class="todo">
+        <input class="todo__value" type="text" placeholder="(empty)" value="Learn to drive">
+        <input class="todo__checkbox" type="checkbox">
+    </div>
+    <div class="todo">
+        <input class="todo__value" type="text" placeholder="(empty)" value="Book a holiday">
+        <input class="todo__checkbox" type="checkbox">
+    </div>
+    <div class="todo">
+        <input class="todo__value" type="text" placeholder="(empty)" value="Go on monthly solo dates">
+        <input class="todo__checkbox" type="checkbox">
+    </div>
+    <div class="todo">
+        <input class="todo__value" type="text" placeholder="(empty)" value="Bake something">
+        <input class="todo__checkbox" type="checkbox">
+    </div>
+    <div class="todo">
+        <input class="todo__value" type="text" placeholder="(empty)" value="Start journey into tech">
+        <input class="todo__checkbox" type="checkbox" checked>
+    </div>
+</div>
+
+
+<div style="text-align:center;">
+    <img src="images/onsofa.gif" alt="Whitney" style="width:50%;height:auto;">
+</div>
+
+<br>
+<br>
+<h1>A little more about me</h1>
+<br>
+
+<div class="container aboutme">
+    <div class="box">
+        <h2>Education</h2> 
+        <p>University of Portsmouth | BSc Hons Digital media | Extensive insight into digital media, 
+master creating stimulating experiences for digital and emerging technologies.</p> 
+    </div>
+    <div class="box">
+        <h2>Experience</h2>
+        <p> Much of my professional experience is in animation, creating corporate style animations 
+            to boost marketing lead generation, event registration and ultimately driving business expansion, through strategically 
+            targeted content.</p>
+    </div>
+    <div class="box">
+        <h2>Hobbies</h2>
+        <p>As much as I love to work, I very much like to play. I'm obsessed with foosball, I love badminton 
+            scenic walks, particularly in summer, bring me so much joy and bike riding, despite the occassional crash, is so much fun. 
+        </p>
+    </div>
+    <div class="box">
+        <h2>Skills</h2>
+        <p>Adobe AfterEffects | Adobe Premiere Pro | Project Management | Animation | Video Editing | Logo Design & more</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+</main>
+
+    <div class="wrapper">
+        <footer>
+            <p>&copy; 2026 My Prep Website</p>
+        </footer>
+    </div>
+
+
+
+
+
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+
+  // Toggle hamburger/X
+  if (hamburger.classList.contains("toggle")) {
+    hamburger.classList.remove("toggle");
+    hamburger.innerHTML = "&#9776;"; // hamburger
+  } else {
+    hamburger.classList.add("toggle");
+    hamburger.innerHTML = "&times;"; // X
+  }
+});
+</script>
+</body>
+</html>
